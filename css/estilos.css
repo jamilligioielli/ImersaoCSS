@@ -1,35 +1,53 @@
 body{
-    background-image: url("https://neilpatel.com/wp-content/uploads/2017/08/colors.jpg");
-    background-size: auto 120vh ;
-    font-family: Arial;
-    height: 100vh;
+    
+        background-image:
+        url("https://data.whicdn.com/images/335390570/original.jpg");
+        background-size: 1200px; 
+        background-position: center;
+        font-family: Arial; 
+        height: 100vh;
+       
   }
-  
+  img{
+    filter: blur(10px);
+  }
   .menu{
-    background-color:white;
+    background-color:none;
+    border-style: hidden;
   }
   .menu ul{
     display:flex;
     justify-content: space-around;
+    
   }
   .menu li{
     list-style:none;
   }
   
   a{
-    color: red;
+    color: rgb(44, 14, 94);
     text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+    text-shadow: 5px 5px lavenderblush;
   }
   a:hover{
-    text-decoration:underline;
+    font-weight: bold;
   }
   
-  .site-subtitle,
+ 
   .site-title{
     color: whitesmoke;
+    font-size: 90px;
     text-align: center;
+    text-shadow: 6px 3px rgb(13, 37, 37);
   }
   .site-subtitle{
+    color: khaki;
+    font-family: sans-serif;
     font-style:italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
   }
   
