@@ -1,19 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
-    
-        background-image:
-        url("https://data.whicdn.com/images/335390570/original.jpg");
-        background-size: 1200px; 
-        background-position: center;
-        font-family: Arial; 
-        height: 100vh;
+      background-image: url("../img/anunciacao.png");
+      background-size: auto 100vh; 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: black;
+      font-family: monospace;
+      height: 100vh;
+       
        
   }
-  img{
-    filter: blur(10px);
+  /*se a tela tiver pelo menos 400px, carregue estes estilos */
+@media (min-width: 400px){
+  body{
+    font-size: 18px;
   }
+  
+ 
+}
+/* breakpoint*/
+@media (min-width: 600px){
+  body{
+    font-size: 22px;
+  }
+}
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .menu{
-    background-color:none;
-    border-style: hidden;
+    position: fixed;
+    width: 100vw;
+    top:0;
+    width: 100vw;
+  }
+  .menu a{
+    padding: 10px 20px;
+    display: block;
   }
   .menu ul{
     display:flex;
@@ -27,7 +58,6 @@ body{
   a{
     color: rgb(44, 14, 94);
     text-decoration: none;
-    font-family: monospace;
     font-size: 20px;
     text-shadow: 5px 5px lavenderblush;
   }
@@ -38,16 +68,50 @@ body{
  
   .site-title{
     color: whitesmoke;
-    font-size: 90px;
     text-align: center;
-    text-shadow: 6px 3px rgb(13, 37, 37);
+    text-shadow: 6px 3px rgb(6, 15, 15);
+    font-size: 2em;
   }
   .site-subtitle{
     color: khaki;
-    font-family: sans-serif;
+    font-family: serif;
     font-style:italic;
-    font-weight: bold;
+    font-weight: lighter;
     text-align: center;
-    font-size: 25px;
+    
+   
   }
-  
+  .img-portfolio{
+    list-style: none;
+    height:200px;
+    width: auto;
+    font-family: cursive;
+    color: white;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  figcaption{
+    color: rgb(213, 206, 226);
+    text-decoration: none;
+    font-size: 20px;
+    font-style:italic;
+    font-weight: lighter;
+    text-shadow: 3px 2px rgb(6, 15, 15);
+    
+  }
+  label{
+    color: whitesmoke;
+    text-align: left;
+    text-shadow: 6px 3px rgb(44, 14, 94);
+    
+  }
+  #elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:auto;
+  }
