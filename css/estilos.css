@@ -1,117 +1,239 @@
 * {
   margin: 0;
+  margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-      background-image: url("../img/anunciacao.png");
-      background-size: auto 100vh; 
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: black;
-      font-family: monospace;
-      height: 100vh;
-       
-       
-  }
-  /*se a tela tiver pelo menos 400px, carregue estes estilos */
-@media (min-width: 400px){
-  body{
+body {
+  background-image: url("../img/anunciacao.png");
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  height: 100vh;
+}
+/*se a tela tiver pelo menos 400px, carregue estes estilos */
+@media (min-width: 400px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
     font-size: 18px;
   }
-  
- 
 }
 /* breakpoint*/
-@media (min-width: 600px){
-  body{
+@media (min-width: 600px) {
+  body {
     font-size: 22px;
   }
 }
 
-  header{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+.menu a {
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 1s, color 2s;
+}
+.menu a:active,
+.menu a:hover {
+  background-color: pink;
+  font-weight: bold;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: rgb(44, 14, 94);
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 5px 5px lavenderblush;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  0% {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
   }
-  
-  .menu{
-    position: fixed;
-    width: 100vw;
-    top:0;
-    width: 100vw;
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
-  .menu a{
-    padding: 10px 20px;
-    display: block;
-  }
-  .menu ul{
-    display:flex;
-    justify-content: space-around;
-    
-  }
-  .menu li{
-    list-style:none;
-  }
-  
-  a{
-    color: rgb(44, 14, 94);
-    text-decoration: none;
-    font-size: 20px;
-    text-shadow: 5px 5px lavenderblush;
-  }
-  a:hover{
-    font-weight: bold;
-  }
-  
- 
-  .site-title{
-    color: whitesmoke;
-    text-align: center;
-    text-shadow: 6px 3px rgb(6, 15, 15);
-    font-size: 2em;
-  }
-  .site-subtitle{
-    color: khaki;
-    font-family: serif;
-    font-style:italic;
-    font-weight: lighter;
-    text-align: center;
-    
-   
-  }
-  .img-portfolio{
-    list-style: none;
-    height:200px;
+}
+
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+  text-shadow: 6px 3px rgb(6, 15, 15);
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+}
+.site-subtitle {
+  color: khaki;
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  line-height: 1.8em;
+}
+.img-portfolio {
+  list-style: none;
+  height: 300px;
+  width: auto;
+  border-radius: 100%;
+  object-fit: cover;
+  font-family: cursive;
+  color: white;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.2);
+}
+
+.contato {
+  background-color: black;
+  min-height: 10vh;
+  padding: 1em;
+}
+.contato .icons {
+  text-align: center;
+}
+.contato a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 2em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+@media (min-width: 908px) {
+  .img-portfolio {
+    height: 10em;
     width: auto;
-    font-family: cursive;
-    color: white;
   }
-  footer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+}
+@media (min-width: 1024px) {
+  .img-portfolio {
+    height: 10em;
+    width: auto;
   }
-  figcaption{
-    color: rgb(213, 206, 226);
-    text-decoration: none;
-    font-size: 20px;
-    font-style:italic;
-    font-weight: lighter;
-    text-shadow: 3px 2px rgb(6, 15, 15);
-    
+}
+figcaption {
+  color: rgb(213, 206, 226);
+  text-decoration: none;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: lighter;
+  text-shadow: 3px 2px rgb(6, 15, 15);
+}
+.sobre {
+  background-color: black;
+}
+
+.sobre,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .sobre,
+  .portfolio {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
   }
-  label{
-    color: whitesmoke;
-    text-align: left;
-    text-shadow: 6px 3px rgb(44, 14, 94);
-    
+}
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  color: whitesmoke;
+  text-align: center;
+  text-shadow: 6px 3px rgb(44, 14, 94);
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.5em;
+}
+.sobre a {
+  font-style: italic;
+  color: violet;
+  text-decoration: none;
+}
+.sobre a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 0px 2px rgb(14, 0, 0);
+}
+.sobre p {
+  color: whitesmoke;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+.sobre .avatar {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  width: 25%;
+  float: right;
+  margin-left: 2em;
+}
+/*fazer media querys para mobile (resp)*/
+
+.portfolio .grid {
+  display: grid;
+  gap: 1em;
+}
+@media (min-width: 648px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
   }
-  #elements{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width:auto;
+}
+@media (min-width: 908px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 250px);
+    height: calc(100vh - 3em - 48px - 1em);
+    justify-content: center;
   }
+}
+@media (min-width: 1008px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(4, 250px);
+    height: calc(100vh - 3em - 48px - 1em);
+    justify-content: center;
+  }
+}
+@media (min-width: 1366px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(4, 270px);
+    height: calc(100vh - 22em - 48px - 1em);
+    justify-content: center;
+  }
+}
+.portfolio figure {
+  text-align: center;
+}
